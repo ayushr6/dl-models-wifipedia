@@ -1,0 +1,247 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.train {
+    background-color: rgb(192, 195, 195);
+    justify-content: center;
+    width: 60%;
+}
+
+header {
+    padding: 2% 4%;
+}
+
+hr {
+    color: rgb(252, 228, 228);
+}
+
+#profile-icon-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid grey;
+}
+
+#profile-icon {
+    font-size: 15rem;
+    color: #645cbb;
+    margin-bottom: 23%;
+}
+
+@media screen and (max-width: 400px) {
+    #profile-icon {
+        font-size: 7rem;
+        margin-bottom: 15%;
+    }
+
+    #profile-icon-div {
+        border-right: none;
+    }
+}
+
+
+.input-group {
+    padding: 1% 4%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.input-group>.form-control {
+    border: 1px solid #645cbb;
+    width: 100%;
+}
+
+#profile-details {
+    padding: 5% 5%;
+}
+
+.button-div {
+    margin-top: 4%;
+    display: flex;
+    align-items: right;
+    padding: 1% 4%;
+    justify-content: right;
+}
+
+.dd-label {
+    color: black;
+    opacity: 1;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.ReactTags__tags {
+    position: relative;
+}
+
+.ReactTags__tagInput {
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.ReactTags__tagInput input.ReactTags__tagInputField,
+.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+    height: 40px;
+    margin: 0;
+    min-width: 150px;
+    font-size: 15px;
+    border: 0;
+    color: grey;
+    padding: 2%;
+}
+
+.ReactTags__editInput {
+    border-radius: 0.4rem;
+}
+
+.ReactTags__editTagInput {
+    display: inline-flex;
+}
+
+.ReactTags__selected span.ReactTags__tag {
+    background: #fff;
+    color: #645cbb;
+    display: inline-block;
+    border-radius: 0.4rem;
+    padding-left: 2%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin: 1% 1%;
+    font-weight: 500;
+}
+
+.ReactTags__selected a.ReactTags__remove {
+    color: #aaa;
+    cursor: pointer;
+}
+
+.ReactTags__remove {
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: red;
+    font-weight: 1000;
+}
+
+.ReactTags__remove:hover {
+    color: white;
+    background-color: rgb(250, 9, 9);
+    border-radius: 0.4rem;
+    margin-left: 0.5rem;
+    transition: 0.3s;
+}
+
+.ReactTags__tagInputField {
+    outline: 0;
+    border-radius: 0.4rem;
+    width: 20rem;
+}
+
+.toggle {
+    --width: 6.8rem;
+    --height: calc(var(--width) / 3);
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    top: 10px;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: #ccc;
+    transition: all 0.4s ease-in-out;
+    background-color: red;
+}
+
+.toggle .slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle input:checked+.slider {
+    background-color: #2196f3;
+}
+
+.toggle input:checked+.slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+}
+
+.toggle .labels {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 20px;
+    color: #fff;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 10px;
+    color: #fff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle input:checked~.labels::after {
+    opacity: 0;
+}
+
+.toggle input:checked~.labels::before {
+    opacity: 1;
+}
+
+.addLine {
+    padding-top: 4%;
+}
+
+.post-form {
+    padding-left: 3%;
+}

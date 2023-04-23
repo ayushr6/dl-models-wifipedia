@@ -1,0 +1,39 @@
+.navbar {
+    /* background-color: red; */
+    border: 2px solid gray;
+}
+
+.left {
+    font-size: 1.7rem;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: green; */
+}
+
+.right {
+    /* background-color: yellow; */
+    width: 50%;
+}
+
+.navbar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-left: 15%;
+}
+
+.item {
+    margin-left: 5%;
+    padding: 1% 2%;
+    /* background-color: green; */
+    font-size: 1.2rem;
+    border: 1px solid #fff;
+}
+
+.item:hover {
+    background-color: rgb(227, 226, 226);
+    cursor: pointer;
+}
